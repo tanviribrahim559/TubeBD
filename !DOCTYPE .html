@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TubeBD</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">TubeBD</div>
+        <nav>
+            <ul>
+                <li><a href="#" id="video-link"><i class="fas fa-video"></i> Video</a></li>
+                <li><a href="#"><i class="fas fa-clapperboard"></i> Short</a></li>
+                <li><a href="#" id="shop-link"><i class="fas fa-store"></i> Shop</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Video Section -->
+    <div class="section" id="video-section" style="display: none;">
+        <h2>Videos</h2>
+        <div class="video-grid">
+            <div class="video-item">
+                <img src="https://img.youtube.com/vi/J8K2sTgcq1c/0.jpg" alt="Video 1 Thumbnail">
+                <button onclick="goToVideo('https://youtu.be/J8K2sTgcq1c?si=1FV--v1LI5iC9cQC')">Play</button>
+            </div>
+            <div class="video-item">
+                <img src="https://img.youtube.com/vi/ejzih5f_RXU/0.jpg" alt="Video 2 Thumbnail">
+                <button onclick="goToVideo('https://youtu.be/ejzih5f_RXU?si=ku6WXL0G5X3BRJNr')">Play</button>
+            </div>
+            <div class="video-item">
+                <img src="https://img.youtube.com/vi/c-U8bY671Hs/0.jpg" alt="Video 3 Thumbnail">
+                <button onclick="goToVideo('https://youtu.be/c-U8bY671Hs?si=QGsxMW2acZZfNNBK')">Play</button>
+            </div>
+            <div class="video-item">
+                <img src="https://img.youtube.com/vi/GfeYDc09jeE/0.jpg" alt="Video 4 Thumbnail">
+                <button onclick="goToVideo('https://youtu.be/GfeYDc09jeE?si=PXMk3lqeLpjpy1Qd')">Play</button>
+            </div>
+            <div class="video-item">
+                <img src="https://img.youtube.com/vi/GjO0_TtZOFs/0.jpg" alt="Video 5 Thumbnail">
+                <button onclick="goToVideo('https://youtu.be/GjO0_TtZOFs?si=TR-CqLntJmKElHHB')">Play</button>
+            </div>
+            <div class="video-item">
+                <img src="https://img.youtube.com/vi/cB16jEknPK8/0.jpg" alt="Video 6 Thumbnail">
+                <button onclick="goToVideo('https://youtu.be/cB16jEknPK8?si=Aq5t0eZybcuA6mp4')">Play</button>
+            </div>
+            <div class="video-item">
+                <img src="https://img.youtube.com/vi/f2pVw82wOZI/0.jpg" alt="Video 7 Thumbnail">
+                <button onclick="goToVideo('https://youtu.be/f2pVw82wOZI?si=nOSJGcXlHgO6KRMe')">Play</button>
+            </div>
+        </div>
+        <button class="back-btn" onclick="goBack()">Back</button>
+    </div>
+
+    <!-- Shop Section -->
+    <div class="section" id="shop-section" style="display: none;">
+        <h2>Shop Categories</h2>
+        <button onclick="showCategory('women')">Women's Fiction</button>
+        <button onclick="showCategory('men')">Men's Fiction</button>
+        <button onclick="showCategory('kids')">Kids' Fiction</button>
+
+        <!-- Women's Section -->
+        <div class="shop-items" id="women" style="display: none;">
+            <h3>Women's Fiction</h3>
+            <div class="shop-item">
+                <img src="https://via.placeholder.com/200" alt="Women's Product 1">
+                <p>Product 1</p>
+                <button onclick="buyNow('https://amzn.to/3Q6kXJ6')">Buy Now</button>
+            </div>
+            <div class="shop-item">
+                <img src="https://via.placeholder.com/200" alt="Women's Product 2">
+                <p>Product 2</p>
+                <button onclick="buyNow('https://amzn.to/3Q6kXJ6')">Buy Now</button>
+            </div>
+            <div class="shop-item">
+                <img src="https://via.placeholder.com/200" alt="Women's Product 3">
+                <p>Product 3</p>
+                <button onclick="buyNow('https://amzn.to/3Q6kXJ6')">Buy Now</button>
+            </div>
+            <div class="shop-item">
+                <img src="https://via.placeholder.com/200" alt="Women's Product 4">
+                <p>Product 4</p>
+                <button onclick="buyNow('https://amzn.to/42OyGvF')">Buy Now</button>
+            </div>
+        </div>
+
+        <!-- Men's Section -->
+        <div class="shop-items" id="men" style="display: none;">
+            <h3>Men's Fiction</h3>
+            <div class="shop-item">
+                <img src="https://via.placeholder.com/200" alt="Men Product 1">
+                <p>Product 1</p>
+                <button onclick="buyNow('https://amzn.to/3WP90vh')">Buy Now</button>
+            </div>
+            <div class="shop-item">
+                <img src="https://via.placeholder.com/200" alt="Men Product 2">
+                <p>Product 2</p>
+                <button onclick="buyNow('https://amzn.to/416LWe1')">Buy Now</button>
+            </div>
+            <div class="shop-item">
+                <img src="https://via.placeholder.com/200" alt="Men Product 3">
+                <p>Product 3</p>
+                <button onclick="buyNow('https://amzn.to/415GpV5')">Buy Now</button>
+            </div>
+        </div>
+
+        <!-- Kids Section -->
+        <div class="shop-items" id="kids" style="display: none;">
+            <h3>Kids' Fiction</h3>
+            <div class="shop-item">
+                <img src="https://via.placeholder.com/200" alt="Kids Product 1">
+                <p>Product 1</p>
+                <button onclick="buyNow('https://amzn.to/3WPgOx8')">Buy Now</button>
+            </div>
+            <div class="shop-item">
+                <img src="https://via.placeholder.com/200" alt="Kids Product 2">
+                <p>Product 2</p>
+                <button onclick="buyNow('https://amzn.to/40MisAv')">Buy Now</button>
+            </div>
+            <div class="shop-item">
+                <img src="https://via.placeholder.com/200" alt="Kids Product 3">
+                <p>Product 3</p>
+                <button onclick="buyNow('https://amzn.to/4hpcFrH')">Buy Now</button>
+            </div>
+        </div>
+        <button class="back-btn" onclick="goBack()">Back</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
